@@ -1,0 +1,42 @@
+{
+  "easycom": {
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+    "^b-(.*)": "@/components/base/$1/index.vue",
+    "^m-(.*)": "@/components/common/$1/index.vue"
+  },
+
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tab-bars/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tab-bars/mine/index",
+        "text": "我的"
+      }
+    ]
+  },
+
+  "pages": [
+    {
+      "path": "pages/tab-bars/home/index",
+      "style": {}
+    },
+    {
+      "path": "pages/tab-bars/mine/index",
+      "style": {}
+    }
+    
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}
