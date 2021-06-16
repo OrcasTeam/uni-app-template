@@ -1,19 +1,30 @@
 <template>
     <m-tabbar>
         <view class="h-full w-full relative">
-            <text class="ab-center  text-red-500">这是首页</text>
+            <text class="ab-center text-red-500">{{ title }}</text>
+            <text>{{ counter.double }}</text>
         </view>
     </m-tabbar>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { useCounterStore } from "@/stores/counter";
+import { defineComponent, ref } from "@vue/composition-api";
+import Tabbar from '@/components/common/tabbar/index.vue';
 
-export default Vue.extend({
+export default defineComponent({
+    setup() {
+        const tabbarRef = ref<InstanceType<typeof Tabbar>>()
+        const counter = useCounterStore();
 
-    onLoad(){
-        this.$toast('1');
-        uni.getSystemInfoSync();
+        counter.increment();
+
+        const title = ref('这是首页');
+        return { title, counter }
+    },
+    onLoad() {
+        console.log('11111111111');
+
     }
 })
 </script>
