@@ -1,7 +1,7 @@
 <template>
     <m-tabbar>
         <view class="h-full w-full relative">
-            <text class="ab-center">这是首页</text>
+            <text class="ab-center  text-red-500">这是首页</text>
         </view>
     </m-tabbar>
 </template>
@@ -13,6 +13,7 @@ export default Vue.extend({
 
     onLoad(){
         this.$toast('1');
+        uni.getSystemInfoSync();
     }
 })
 </script>
